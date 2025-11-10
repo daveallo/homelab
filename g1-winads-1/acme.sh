@@ -1,6 +1,6 @@
 git clone --depth 1 https://github.com/acmesh-official/acme.sh.git /tmp/acme
 cd /tmp/acme && ./acme.sh --install --accountemail $ACME_EMAIL
-source $HOME/.bashrc
+. $HOME/.bashrc
 acme.sh --set-default-ca --server letsencrypt
 export CF_Token=$ACME_TOKEN && acme.sh \
   --issue \
