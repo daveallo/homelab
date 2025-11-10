@@ -1,8 +1,12 @@
+#!/usr/bin/env bash
+set -e
+export PATH+=':/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+
 git clone --depth 1 https://github.com/acmesh-official/acme.sh.git /tmp/acme
 cd /tmp/acme && ./acme.sh --install --accountemail $ACME_EMAIL
-. $HOME/.bashrc
-acme.sh --set-default-ca --server letsencrypt
-export CF_Token=$ACME_TOKEN && acme.sh \
+rm -fr /tmp/acme
+cd $HOME/.acme.sh && ./acme.sh --set-default-ca --server letsencrypt
+export CF_Token=$ACME_TOKEN && ./acme.sh \
   --issue \
   --domain $HOSTNAME.$DOMAIN_NAME \
   --dns dns_cf \
