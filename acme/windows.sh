@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
-export PATH+=':/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 git clone --depth 1 https://github.com/acmesh-official/acme.sh.git /tmp/acme
 cd /tmp/acme && ./acme.sh --install --accountemail $ACME_EMAIL
