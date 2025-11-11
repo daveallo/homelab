@@ -7,7 +7,7 @@ Invoke-WebRequest -Uri https://raw.githubusercontent.com/daveallo/homelab/refs/h
   -OutFile "C:\Program Files\Telegraf\telegraf.d\outputs.conf"
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/daveallo/homelab/refs/heads/main/telegraf/windows-system.conf `
   -OutFile "C:\Program Files\Telegraf\telegraf.d\windows-system.conf"
-( Get-WindowsFeature -Name AD-Domain-Services | Where Installed ) -or ( `
+( Get-WindowsFeature -Name AD-Domain-Services | Where Installed ) -and ( `
   Invoke-WebRequest -Uri https://raw.githubusercontent.com/daveallo/homelab/refs/heads/main/telegraf/windows-ads.conf `
     -OutFile "C:\Program Files\Telegraf\telegraf.d\windows-ads.conf"
 ) | Out-Null
