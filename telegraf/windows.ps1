@@ -10,7 +10,7 @@ Invoke-WebRequest -Uri https://raw.githubusercontent.com/daveallo/homelab/refs/h
 If ( Get-WindowsFeature -Name AD-Domain-Services | Where Installed ) {
   Invoke-WebRequest -Uri https://raw.githubusercontent.com/daveallo/homelab/refs/heads/main/telegraf/windows-ads.conf `
     -OutFile "C:\Program Files\Telegraf\telegraf.d\windows-ads.conf"
-} | Out-Null
+}
 New-Item -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Telegraf" -Force
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Telegraf" `
   -Name Environment `
