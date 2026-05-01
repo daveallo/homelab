@@ -5,5 +5,5 @@ Add-Computer `
     -ArgumentList ([pscustomobject]@{
       UserName = $env:AD_USER;
       Password = (ConvertTo-SecureString -String $env:AD_PASSWORD -AsPlainText -Force)[0]})) `
-  -OUPath $env:AD_PATH `
+  -OUPath $env:AD_OU_PATH `
   -Restart
