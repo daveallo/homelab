@@ -1,6 +1,6 @@
 Add-Computer `
   -DomainName $env:DOMAIN_NAME `
-  -Credential (New-Object `
+  -Credential $(New-Object `
     -TypeName PSCredential `
     -ArgumentList ([pscustomobject]@{
       UserName = $env:AD_USER;
