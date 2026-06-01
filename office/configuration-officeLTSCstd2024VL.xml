@@ -1,0 +1,12 @@
+<Configuration>
+  <Add OfficeClientEdition="64" Channel="PerpetualVL2024">
+    <Product ID="Standard2024Volume" PIDKEY="V28N4-JG22K-W66P8-VTMGK-H6HGR">
+      <Language ID="it-it" />
+      <ExcludeApp ID="Publisher" />
+    </Product>
+    <Product ID="VisioStd2024Volume" PIDKEY="JMMVY-XFNQC-KK4HK-9H7R3-WQQTV">
+      <Language ID="it-it" />
+    </Product>
+  </Add>
+  <Display Level="None" AcceptEULA="TRUE" />
+</Configuration>
